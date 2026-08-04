@@ -17,15 +17,16 @@ public class MealHistory {
     @Column(columnDefinition = "TEXT")
     private String meal;
 
-    private String calories;
+    // Numeric values
+    private Integer calories;
 
-    private String protein;
+    private Double protein;
 
-    private String carbs;
+    private Double carbs;
 
-    private String fat;
+    private Double fat;
 
-    private String fiber;
+    private Double fiber;
 
     private Integer healthScore;
 

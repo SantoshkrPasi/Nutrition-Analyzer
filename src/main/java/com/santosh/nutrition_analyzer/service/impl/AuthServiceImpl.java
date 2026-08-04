@@ -1,4 +1,4 @@
-package com.santosh.nutrition_analyzer.service.imp;
+package com.santosh.nutrition_analyzer.service.impl;
 
 import com.santosh.nutrition_analyzer.dto.auth.LoginRequest;
 import com.santosh.nutrition_analyzer.dto.auth.LoginResponse;
@@ -10,7 +10,6 @@ import com.santosh.nutrition_analyzer.repository.UserRepository;
 import com.santosh.nutrition_analyzer.security.JwtService;
 import com.santosh.nutrition_analyzer.service.AuthService;
 import lombok.RequiredArgsConstructor;
-import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
