@@ -1,0 +1,13 @@
+santoshkumarpasi@Santoshs-MacBook-Air ~ % ps -ef | grep java
+
+
+
+
+
+
+
+
+
+
+
+

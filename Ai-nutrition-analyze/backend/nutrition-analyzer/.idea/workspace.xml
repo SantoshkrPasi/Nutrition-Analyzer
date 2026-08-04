@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="d1bfb25c-d03f-4755-abac-b2dd2735bc5a" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../langraph/1-BasicChatbot/1-basicchatbot.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../langraph/requirements.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../monitoring-system/Dockerfile" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CopilotPersistence">
+    <persistenceIdMap>
+      <entry key="_/Users/santoshkumarpasi/Downloads/nutrition-analyzer" value="3HPKPnVXM9uOjZjJWL3gwkqboz6" />
+    </persistenceIdMap>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Enum" />
+        <option value="Interface" />
+        <option value="Exception" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHomeTypeForPersistence" value="WRAPPER" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="NextEditCompletionFeaturesState">
+    <decayedCancelled>
+      <entry key="MS100" value="1.3013497591016403" />
+      <entry key="MS500" value="2.259994352010581" />
+      <entry key="S2" value="2.773202844590143" />
+      <entry key="S5" value="2.9052461310908946" />
+      <entry key="S10" value="2.951920578865554" />
+      <entry key="S30" value="2.9894932390232265" />
+      <entry key="S60" value="3.467479352434361" />
+      <entry key="M2" value="7.355222249486622" />
+      <entry key="M5" value="19.477977616523734" />
+      <entry key="M10" value="28.681156327716934" />
+      <entry key="M15" value="32.837306421319234" />
+      <entry key="M30" value="39.14877648368346" />
+      <entry key="H1" value="52.222905931137774" />
+      <entry key="H2" value="82.83257267632129" />
+      <entry key="H4" value="129.6893142056918" />
+      <entry key="D1" value="222.67804360643268" />
+      <entry key="W1" value="248.330217688311" />
+    </decayedCancelled>
+    <decayedSelected>
+      <entry key="MS100" value="0.0" />
+      <entry key="MS500" value="0.0" />
+      <entry key="S2" value="0.0" />
+      <entry key="S5" value="1.8337955040863795E-261" />
+      <entry key="S10" value="4.2822838580439514E-131" />
+      <entry key="S30" value="3.4985803993929977E-44" />
+      <entry key="S60" value="1.8712660009483318E-22" />
+      <entry key="M2" value="1.4080606583584707E-11" />
+      <entry key="M5" value="6.184220766988966E-5" />
+      <entry key="M10" value="0.012503916789616836" />
+      <entry key="M15" value="0.07649330512387711" />
+      <entry key="M30" value="0.5213363212474391" />
+      <entry key="H1" value="2.2958656421583874" />
+      <entry key="H2" value="8.535568471099216" />
+      <entry key="H4" value="19.70248144460066" />
+      <entry key="D1" value="42.57507472116197" />
+      <entry key="W1" value="48.8588401328051" />
+    </decayedSelected>
+    <decayedShown>
+      <entry key="MS100" value="1.2463413505468737" />
+      <entry key="MS500" value="2.2395431559278425" />
+      <entry key="S2" value="2.7668289605754697" />
+      <entry key="S5" value="2.902566734710364" />
+      <entry key="S10" value="2.9505579289799715" />
+      <entry key="S30" value="2.9890327380665056" />
+      <entry key="S60" value="3.467203786120367" />
+      <entry key="M2" value="7.3548976049744095" />
+      <entry key="M5" value="19.47767430027734" />
+      <entry key="M10" value="28.69334398189413" />
+      <entry key="M15" value="32.91341427819546" />
+      <entry key="M30" value="39.6693423248532" />
+      <entry key="H1" value="54.51702924430353" />
+      <entry key="H2" value="91.3646989804285" />
+      <entry key="H4" value="149.38771510936692" />
+      <entry key="D1" value="265.2516215098937" />
+      <entry key="W1" value="297.188811745538" />
+    </decayedShown>
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 2,
+  &quot;fromUser&quot;: false
+}</component>
+  <component name="ProjectId" id="3HPKPnVXM9uOjZjJWL3gwkqboz6" />
+  <component name="ProjectSessionTemplates">
+    <option name="panelTemplate">
+      <template>
+        <option name="modeId" value="Agent" />
+        <option name="model">
+          <model>
+            <option name="modelType" value="builtin_id" />
+            <option name="modelValue" value="auto" />
+          </model>
+        </option>
+        <option name="targetType" value="BACKGROUND" />
+        <option name="worktreeMode" value="WORKSPACE" />
+      </template>
+    </option>
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
+    &quot;Spring Boot.NutritionAnalyzerApplication.executor&quot;: &quot;Run&quot;,
+    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
+    &quot;copilot.chat.legacySessionMetadata.migrated&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/santoshkumarpasi/Downloads/nutrition-analyzer&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.sourceCode.JAVA&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="NutritionAnalyzerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UnknownPolicyInFreeMode" />
+      <module name="nutrition-analyzer" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.santosh.nutrition_analyzer.NutritionAnalyzerApplication" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.santosh.nutrition_analyzer.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Spring Boot.NutritionAnalyzerApplication" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-30f59d01ecdd-37e91769500f-intellij.indexing.shared.core-IU-261.25134.95" />
+        <option value="bundled-js-predefined-d6986cc7102b-31caf2ab9e3c-JavaScript-IU-261.25134.95" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="d1bfb25c-d03f-4755-abac-b2dd2735bc5a" name="Changes" comment="" />
+      <created>1785764241988</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1785764241988</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
