@@ -6,11 +6,13 @@ import Input from "../../components/common/Input";
 import Button from "../../components/common/Button";
 import { login } from "../../services/authService";
 import { useNavigate } from "react-router-dom";
+import toast from "react-hot-toast";
 
 export default function Login() {
 
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
+    const [loading, setLoading] = useState(false);
     const navigate = useNavigate();
     useEffect(() => {
 
@@ -26,7 +28,25 @@ export default function Login() {
 
         e.preventDefault();
 
+        if (!email.trim()) {
+
+            toast.error("Please enter your email.");
+
+            return;
+
+        }
+
+        if (!password.trim()) {
+
+            toast.error("Please enter your password.");
+
+            return;
+
+        }
+
         try {
+
+            setLoading(true);
 
             const response = await login({
 
@@ -34,15 +54,26 @@ export default function Login() {
                 password
 
             });
+
             const token = response.data.data.token;
 
             localStorage.setItem("token", token);
+
+            toast.success("Login successful!");
+
             navigate("/dashboard");
-            console.log(response.data);
 
         } catch (error) {
 
-            console.error(error);
+            const message =
+                error.response?.data?.message ||
+                "Invalid email or password.";
+
+            toast.error(message);
+
+        } finally {
+
+            setLoading(false);
 
         }
 
@@ -95,9 +126,12 @@ export default function Login() {
                         onChange={(e) => setPassword(e.target.value)}
                     />
 
-                    <Button type="submit">
+                    <Button
+                        type="submit"
+                        disabled={loading}
+                    >
 
-                        Login
+                        {loading ? "Logging in..." : "Login"}
 
                     </Button>
 

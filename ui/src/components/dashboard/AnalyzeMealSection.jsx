@@ -1,7 +1,8 @@
-import { useState } from "react";
-import { analyzeMeal } from "../../services/foodService";
+import {useState} from "react";
+import {analyzeMeal} from "../../services/foodService";
+import toast from "react-hot-toast";
 
-export default function AnalyzeMealSection({ onAnalysisComplete }) {
+export default function AnalyzeMealSection({onAnalysisComplete}) {
 
     const [meal, setMeal] = useState("");
     const [loading, setLoading] = useState(false);
@@ -9,7 +10,7 @@ export default function AnalyzeMealSection({ onAnalysisComplete }) {
     const handleAnalyze = async () => {
 
         if (!meal.trim()) {
-            alert("Please enter a meal.");
+            toast.error("Please enter a meal.");
             return;
         }
 
@@ -20,6 +21,7 @@ export default function AnalyzeMealSection({ onAnalysisComplete }) {
             const nutrition = await analyzeMeal(meal);
 
             onAnalysisComplete(nutrition);
+            toast.success("Meal analyzed successfully!");
 
             setMeal("");
 
@@ -27,7 +29,7 @@ export default function AnalyzeMealSection({ onAnalysisComplete }) {
 
             console.error(error);
 
-            alert("Failed to analyze meal.");
+            toast.error("Failed to analyze meal.");
 
         } finally {
 

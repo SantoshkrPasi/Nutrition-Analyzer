@@ -1,8 +1,13 @@
-import {NavLink} from "react-router-dom";
-import {FaLeaf} from "react-icons/fa";
-import {useNavigate} from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
+import {
+    FaChartPie,
+    FaUtensils,
+    FaHistory,
+    FaSignOutAlt
+} from "react-icons/fa";
 
 export default function Navbar() {
+
     const navigate = useNavigate();
 
     const logout = () => {
@@ -12,51 +17,70 @@ export default function Navbar() {
         navigate("/login");
 
     };
-    return (
-        <nav className="bg-white shadow-sm border-b">
-            <div className="max-w-7xl mx-auto flex items-center justify-between px-6 h-16">
 
-                <div className="flex items-center gap-2">
-                    <FaLeaf className="text-emerald-500 text-2xl"/>
-                    <h1 className="text-2xl font-bold text-slate-800">
-                        NutriAI
+    const linkStyle = ({ isActive }) =>
+        `flex items-center gap-2 px-4 py-2 rounded-xl transition ${
+            isActive
+                ? "bg-emerald-500 text-white"
+                : "text-slate-700 hover:bg-slate-100"
+        }`;
+
+    return (
+
+        <nav className="bg-white shadow-sm border-b">
+
+            <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+
+                <div>
+
+                    <h1 className="text-3xl font-bold text-emerald-600">
+
+                        🥗 NutriAI
+
                     </h1>
+
                 </div>
 
-                <div className="flex items-center gap-6">
+                <div className="flex items-center gap-3">
 
                     <NavLink
                         to="/dashboard"
-                        className="hover:text-emerald-500"
+                        className={linkStyle}
                     >
+                        <FaChartPie />
                         Dashboard
                     </NavLink>
 
                     <NavLink
                         to="/analyze"
-                        className="hover:text-emerald-500"
+                        className={linkStyle}
                     >
-                        Analyze Meal
+                        <FaUtensils />
+                        Analyze
                     </NavLink>
 
                     <NavLink
                         to="/history"
-                        className="hover:text-emerald-500"
+                        className={linkStyle}
                     >
+                        <FaHistory />
                         History
                     </NavLink>
+
                     <button
                         onClick={logout}
-                        className="bg-red-500 text-white px-4 py-2 rounded-lg hover:bg-red-600"
+                        className="flex items-center gap-2 bg-red-500 text-white px-4 py-2 rounded-xl hover:bg-red-600 transition"
                     >
-
+                        <FaSignOutAlt />
                         Logout
-
                     </button>
 
                 </div>
 
             </div>
+
         </nav>
+
     );
+
 }

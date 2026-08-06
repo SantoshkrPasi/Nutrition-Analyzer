@@ -11,5 +11,5 @@ export const getMealHistory = async () => {
 };
 
 export const deleteMeal = async (mealId) => {
-    await api.delete(`/food/${mealId}`);
+    return await api.delete(`/food/history/${mealId}`);
 };

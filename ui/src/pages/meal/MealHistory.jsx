@@ -1,8 +1,12 @@
 import { useEffect, useState } from "react";
+
 import MainLayout from "../../components/layout/MainLayout";
 import MealCard from "../../components/meal/MealCard";
 import EmptyState from "../../components/common/EmptyState";
 import Loader from "../../components/common/Loader";
+import DeleteModal from "../../components/common/DeleteModal";
+
+import toast from "react-hot-toast";
 
 import {
     getMealHistory,
@@ -14,7 +18,9 @@ export default function MealHistory() {
     const [meals, setMeals] = useState([]);
     const [loading, setLoading] = useState(true);
 
-    // Load all meals
+    const [selectedMealId, setSelectedMealId] = useState(null);
+    const [showDeleteModal, setShowDeleteModal] = useState(false);
+
     const loadMeals = async () => {
 
         try {
@@ -25,7 +31,7 @@ export default function MealHistory() {
 
         } catch (error) {
 
-            console.error("Failed to fetch meals:", error);
+            console.error(error);
 
         } finally {
 
@@ -41,48 +47,70 @@ export default function MealHistory() {
 
     }, []);
 
-    // Delete meal
-    const handleDelete = async (id) => {
+    const openDeleteModal = (id) => {
+
+        setSelectedMealId(id);
+
+        setShowDeleteModal(true);
+
+    };
+
+    const handleDelete = async () => {
 
         try {
 
-            await deleteMeal(id);
+            await deleteMeal(selectedMealId);
 
-            // Refresh the list after deleting
-            loadMeals();
+            toast.success("Meal deleted successfully!");
+
+            await loadMeals();
 
         } catch (error) {
 
-            console.error("Failed to delete meal:", error);
+            toast.error("Failed to delete meal.");
+
+        } finally {
+
+            setShowDeleteModal(false);
+
+            setSelectedMealId(null);
 
         }
 
     };
 
-    // Loading UI
     if (loading) {
 
         return (
+
             <MainLayout>
+
                 <Loader />
+
             </MainLayout>
+
         );
 
     }
 
-    // Empty UI
     if (meals.length === 0) {
 
         return (
+
             <MainLayout>
 
                 <h1 className="text-4xl font-bold mb-8">
+
                     Meal History
+
                 </h1>
 
-                <EmptyState message="No meals analyzed yet." />
+                <EmptyState
+                    message="No meals analyzed yet."
+                />
 
             </MainLayout>
+
         );
 
     }
@@ -104,12 +132,23 @@ export default function MealHistory() {
                     <MealCard
                         key={meal.id}
                         meal={meal}
-                        onDelete={handleDelete}
+                        onDelete={openDeleteModal}
                     />
 
                 ))}
 
             </div>
+
+            <DeleteModal
+                isOpen={showDeleteModal}
+                onClose={() => {
+
+                    setShowDeleteModal(false);
+                    setSelectedMealId(null);
+
+                }}
+                onConfirm={handleDelete}
+            />
 
         </MainLayout>
 
