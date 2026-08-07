@@ -2,7 +2,7 @@
 
 > An AI-powered full-stack nutrition analysis platform that helps users estimate the nutritional value of their meals, track eating habits, and monitor health insights through an intuitive dashboard.
 
-🌐 **Live Demo:** https://nutrition-analyzer-mjmdsieqt-santosh-kumar-pasis-projects.vercel.app/login
+🌐 **Live Demo:** https://nutrition-analyzer-908l3evi6-santosh-kumar-pasis-projects.vercel.app
 
 🚀 **Backend API:** https://nutrition-analyzer-api-3tqq.onrender.com
 
