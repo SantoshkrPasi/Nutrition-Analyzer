@@ -1,11 +1,11 @@
-import { Link } from "react-router-dom";
+import {Link} from "react-router-dom";
 import {useEffect, useState} from "react";
 
 import Card from "../../components/common/Card";
 import Input from "../../components/common/Input";
 import Button from "../../components/common/Button";
-import { login } from "../../services/authService";
-import { useNavigate } from "react-router-dom";
+import {login} from "../../services/authService";
+import {useNavigate} from "react-router-dom";
 import toast from "react-hot-toast";
 
 export default function Login() {
@@ -50,8 +50,7 @@ export default function Login() {
 
             const response = await login({
 
-                email,
-                password
+                email, password
 
             });
 
@@ -65,9 +64,7 @@ export default function Login() {
 
         } catch (error) {
 
-            const message =
-                error.response?.data?.message ||
-                "Invalid email or password.";
+            const message = error.response?.data?.message || "Invalid email or password.";
 
             toast.error(message);
 
@@ -81,9 +78,28 @@ export default function Login() {
 
     return (
 
-        <div className="min-h-screen bg-slate-100 flex items-center justify-center px-4">
+        <div className="min-h-screen
+flex
+items-center
+justify-center
 
-            <Card className="w-full max-w-md">
+bg-gradient-to-br
+from-emerald-50
+via-white
+to-cyan-50
+
+px-6
+py-12">
+
+            <Card className="w-full
+max-w-md
+
+border
+border-white/40
+
+backdrop-blur-xl
+
+shadow-[0_30px_80px_rgba(15,23,42,0.12)]">
 
                 <div className="text-center mb-8">
 
@@ -91,13 +107,22 @@ export default function Login() {
                         🥗
                     </h1>
 
-                    <h2 className="text-3xl font-bold mt-3">
-
+                    <h2 className="
+text-4xl
+font-extrabold
+tracking-tight
+text-slate-900
+">
                         NutriAI
 
                     </h2>
 
-                    <p className="text-slate-500 mt-2">
+                    <p className="
+text-slate-500
+mt-3
+text-base
+leading-relaxed
+">
 
                         Your AI Nutrition Companion
 
@@ -107,7 +132,7 @@ export default function Login() {
 
                 <form
                     onSubmit={handleSubmit}
-                    className="space-y-5"
+                    className="space-y-6 mt-8"
                 >
 
                     <Input
