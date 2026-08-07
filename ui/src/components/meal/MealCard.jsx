@@ -44,7 +44,16 @@ export default function MealCard({
 
     return (
 
-        <div className="bg-white rounded-2xl shadow-md border hover:shadow-xl transition-all duration-300 p-6">
+        <div className="bg-white rounded-2xl shadow-md border hover:shadow-xl transition-all duration-300 p-6 rounded-3xl
+
+overflow-hidden
+
+hover:shadow-2xl
+
+hover:-translate-y-2
+
+transition-all
+duration-300">
 
             <div className="flex justify-between items-start">
 

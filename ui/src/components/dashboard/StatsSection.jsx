@@ -10,7 +10,9 @@ export default function StatsSection({ dashboard }) {
 
     return (
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 hover:scale-[1.02]
+transition-all
+duration-300">
 
             <DashboardCard
                 title="Meals Today"

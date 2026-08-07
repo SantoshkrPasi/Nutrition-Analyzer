@@ -24,18 +24,30 @@ export default function Input({
                 value={value}
                 onChange={onChange}
                 className="
-                    w-full
-                    rounded-xl
-                    border
-                    border-slate-300
-                    px-4
-                    py-3
-                    outline-none
-                    focus:border-emerald-500
-                    focus:ring-2
-                    focus:ring-emerald-200
-                    transition
-                "
+w-full
+
+rounded-2xl
+
+bg-white/70
+
+border
+border-slate-200
+
+px-4
+py-3.5
+
+transition-all
+duration-300
+
+placeholder:text-slate-400
+
+focus:border-emerald-500
+focus:ring-4
+focus:ring-emerald-100
+focus:bg-white
+
+outline-none
+"
             />
 
         </div>
