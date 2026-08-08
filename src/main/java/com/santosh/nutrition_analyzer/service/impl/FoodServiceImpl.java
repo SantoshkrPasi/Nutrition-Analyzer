@@ -16,6 +16,7 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Service;
 
+import java.time.LocalDate;
 import java.util.List;
 
 @Service
@@ -77,38 +78,44 @@ public class FoodServiceImpl implements FoodService {
         List<MealHistory> meals =
                 mealHistoryRepository.findByUserId(user.getId());
 
-        int mealsToday = meals.size();
+        LocalDate today = LocalDate.now();
 
-        int averageHealthScore =
-                (int) meals.stream()
-                           .mapToInt(MealHistory::getHealthScore)
-                           .average()
-                           .orElse(0);
+        List<MealHistory> todayMeals = meals.stream()
+                                            .filter(meal -> meal.getAnalyzedAt().toLocalDate().equals(today))
+                                            .toList();
+
+        int mealsToday = todayMeals.size();
+
+        Double averageHealthScore =
+                todayMeals.stream()
+                          .mapToInt(MealHistory::getHealthScore)
+                          .average()
+                          .orElse(0);
 
         int totalCalories =
-                meals.stream()
-                     .mapToInt(MealHistory::getCalories)
-                     .sum();
+                todayMeals.stream()
+                          .mapToInt(MealHistory::getCalories)
+                          .sum();
 
         double totalProtein =
-                meals.stream()
-                     .mapToDouble(MealHistory::getProtein)
-                     .sum();
+                todayMeals.stream()
+                          .mapToDouble(MealHistory::getProtein)
+                          .sum();
 
         double totalCarbs =
-                meals.stream()
-                     .mapToDouble(MealHistory::getCarbs)
-                     .sum();
+                todayMeals.stream()
+                          .mapToDouble(MealHistory::getCarbs)
+                          .sum();
 
         double totalFat =
-                meals.stream()
-                     .mapToDouble(MealHistory::getFat)
-                     .sum();
+                todayMeals.stream()
+                          .mapToDouble(MealHistory::getFat)
+                          .sum();
 
         double totalFiber =
-                meals.stream()
-                     .mapToDouble(MealHistory::getFiber)
-                     .sum();
+                todayMeals.stream()
+                          .mapToDouble(MealHistory::getFiber)
+                          .sum();
 
         return new DashboardResponse(
                 mealsToday,

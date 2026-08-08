@@ -21,6 +21,6 @@ public class DashboardResponse {
 
     private Double totalFiber;
 
-    private int averageHealthScore;
+    private Double averageHealthScore;
 
 }
