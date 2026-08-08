@@ -12,8 +12,7 @@ export default function RecentMeals() {
             const data = await getMealHistory();
 
             // Show only latest 3 meals
-            setMeals(data.slice(0, 3));
-
+	        setMeals(data.slice(-3).reverse());
         } catch (error) {
 
             console.error(error);

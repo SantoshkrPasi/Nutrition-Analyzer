@@ -127,7 +127,7 @@ export default function MealHistory() {
 
             <div className="space-y-6">
 
-                {meals.map((meal) => (
+                {[...meals].reverse().map((meal) => (
 
                     <MealCard
                         key={meal.id}
